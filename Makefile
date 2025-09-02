@@ -4,7 +4,7 @@ LINT_VERSION=1.61.0
 MODULES = $(sort $(patsubst %/,%,$(dir $(wildcard */go.mod))))
 GOLANGCI_FLAGS =
 ifeq (${CI},true)
-	GOLANGCI_FLAGS = --out-format github-actions
+	GOLANGCI_FLAGS = --out-format colored-line-number
 endif
 
 .PHONY: all
